@@ -5,11 +5,17 @@
 #
 
 # Inherit from the proprietary version
-$(call inherit-product, vendor/xiaomi/miuicamera-zeus/miuicamera-zeus-vendor.mk)
+$(call inherit-product, vendor/xiaomi/miuicamera-everpal/miuicamera-everpal-vendor.mk)
 
 # Priv-app permission
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuicamera.xml
+
+# Properties
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.camera.privapp.list=com.android.camera \
+    ro.miui.notch=1 \
+    ro.com.google.lens.oem_camera_package=com.android.camera
 
 # Shims
 PRODUCT_PACKAGES += \

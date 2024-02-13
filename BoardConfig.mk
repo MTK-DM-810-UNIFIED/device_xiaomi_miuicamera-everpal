@@ -5,12 +5,9 @@
 #
 
 # Inherit from the proprietary version
-include vendor/xiaomi/miuicamera-zeus/BoardConfigVendor.mk
+include vendor/xiaomi/miuicamera-everpal/BoardConfigVendor.mk
 
-MIUICAMERA_PATH := device/xiaomi/miuicamera-zeus
-
-# Properties
-TARGET_SYSTEM_PROP += $(MIUICAMERA_PATH)/system.prop
+MIUICAMERA_PATH := device/xiaomi/miuicamera-everpal
 
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(MIUICAMERA_PATH)/sepolicy/vendor
